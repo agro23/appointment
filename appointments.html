@@ -6,16 +6,16 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
       <script src="js/scripts.js"></script>
   </head>
   <body>
 <!--
 Appointments
-Create a website for booking appointments with you. Users should be able to enter their name, 
+Create a website for booking appointments with you. Users should be able to enter their name,
 a description of the appointment, the appointment date, and start/end times.
 
 After they submit the form, tell them the booking was successful. You might try using a modal
@@ -30,13 +30,58 @@ to do this, or redirect to a different page that contains the text "Booking Succ
       date
       start/end time
       SUBMIT
-    </div>
+      <div class="formOne">
+        <div class="well">
+          <h2>Fill in info</h2>
+          <form id="formOne">
 
-    <div class="ourModal">
-      <h2>MODAL</h2>
-      <p>You have successfully booked an appointment with me!</p>
-      <p>See you then!</p>
-    </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input id="firstName" class="form-control" type="text">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" class="form-control" type="text">
+              </div>
+            </div>
 
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="description">Purpose of our meeting</label>
+                <input id="description" class="form-control" type="text">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label for="date">Date</label>
+                <input id="date" class="form-control" type="text">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="start">Start Time</label>
+                <input id="start" class="form-control" type="text">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="end">End Time</label>
+                <input id="end" class="form-control" type="text">
+              </div>
+
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+
+        <div id="ourModal">
+          <h2>MODAL</h2>
+          <p>You have successfully booked an appointment with me!</p>
+          <p>See you then!</p>
+          <p></p>
+          <button type="close" class="btn">close</button>
+        </div>
+
+      </div>
+    </div>
   </body>
 </html>
